@@ -28,7 +28,7 @@ class ContactDetailsActivity : AppCompatActivity() {
             toast(tv_name.text)
         }
 
-        tv_name.onClick {
+        tv_phone.onClick {
             toast(tv_phone.text)
         }
 
