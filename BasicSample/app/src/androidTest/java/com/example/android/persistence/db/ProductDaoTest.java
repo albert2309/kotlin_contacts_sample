@@ -30,7 +30,6 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.example.android.persistence.LiveDataTestUtil;
-import com.example.android.persistence.db.dao.ProductDao;
 import com.example.android.persistence.db.entity.ProductEntity;
 
 import org.junit.After;
@@ -42,7 +41,7 @@ import org.junit.runner.RunWith;
 import java.util.List;
 
 /**
- * Test the implementation of {@link ProductDao}
+ * Test the implementation of {@link ProductEntity.IDao}
  */
 @RunWith(AndroidJUnit4.class)
 public class ProductDaoTest {
@@ -52,7 +51,7 @@ public class ProductDaoTest {
 
     private AppDatabase mDatabase;
 
-    private ProductDao mProductDao;
+    private ProductEntity.IDao mProductDao;
 
     @Before
     public void initDb() throws Exception {

@@ -33,9 +33,7 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.example.android.persistence.LiveDataTestUtil;
-import com.example.android.persistence.db.dao.CommentDao;
 import com.example.android.persistence.db.dao.ProductDao;
-import com.example.android.persistence.db.entity.CommentEntity;
 
 import org.junit.After;
 import org.junit.Before;

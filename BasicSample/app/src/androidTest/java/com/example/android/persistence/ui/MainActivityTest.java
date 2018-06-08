@@ -61,7 +61,7 @@ public class MainActivityTest {
 
     public MainActivityTest() {
         // delete the database
-        InstrumentationRegistry.getTargetContext().deleteDatabase(AppDatabase.DATABASE_NAME);
+        InstrumentationRegistry.getTargetContext().deleteDatabase(AppDatabase.Companion.getDATABASE_NAME());
     }
 
     @Before
@@ -73,7 +73,7 @@ public class MainActivityTest {
     @Before
     public void waitForDbCreation() throws Throwable {
         final CountDownLatch latch = new CountDownLatch(1);
-        final LiveData<Boolean> databaseCreated = AppDatabase.getInstance(
+        final LiveData<Boolean> databaseCreated = AppDatabase.Companion.getInstance(
                 InstrumentationRegistry.getTargetContext(), new AppExecutors())
                 .getDatabaseCreated();
         mActivityRule.runOnUiThread(new Runnable() {

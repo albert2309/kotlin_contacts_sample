@@ -15,6 +15,7 @@
  */
 
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion build_versions.target_sdk
@@ -81,4 +82,8 @@ dependencies {
     androidTestImplementation deps.support.v4
     androidTestImplementation deps.support.app_compat
     androidTestImplementation deps.support.design
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
